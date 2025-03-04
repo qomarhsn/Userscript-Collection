@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube Quick Downloader
 // @namespace    https://github.com/qomarhsn/Userscript-Collection
-// @version      1.0
+// @version      1.1
 // @description  Adds a floating button to YouTube for quick video downloads via ssyoutube.com.
 // @author       Qomarul Hasan
 // @license      MIT
