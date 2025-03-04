@@ -12,6 +12,8 @@
 // @grant        none
 // @homepageURL  https://github.com/qomarhsn/Userscript-Collection
 // @supportURL   https://github.com/qomarhsn/Userscript-Collection/issues
+// @updateURL    https://github.com/qomarhsn/Userscript-Collection/raw/main/youtube-quick-downloader.user.js
+// @downloadURL  https://github.com/qomarhsn/Userscript-Collection/raw/main/youtube-quick-downloader.user.js
 // ==/UserScript==
 
 (function() {
