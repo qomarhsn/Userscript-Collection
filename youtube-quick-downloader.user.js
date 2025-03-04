@@ -7,7 +7,7 @@
 // @license      MIT
 // @match        *://www.youtube.com/watch?v=*
 // @match        *://m.youtube.com/watch?v=*
-// @icon         https://www.youtube.com/s/desktop/e605d7f4/img/favicon.ico
+// @icon         https://www.youtube.com/favicon.ico
 // @run-at       document-end
 // @grant        none
 // @homepageURL  https://github.com/qomarhsn/Userscript-Collection
