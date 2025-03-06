@@ -9,7 +9,7 @@ A collection of useful userscripts for enhancing web experiences.
 | YouTube Quick Downloader   | A script to quickly download YouTube videos.   | [Qomarul Hasan](https://github.com/qomarhsn) | [Download](https://github.com/qomarhsn/Userscript-Collection/raw/main/youtube-quick-downloader.user.js) |
 | LinkedIn Job Card Styler   | A script to style LinkedIn job cards for better readability. | [Mohammad Aiyub Ali Bappy](https://github.com/MAAB-FW) | [Download](https://github.com/qomarhsn/Userscript-Collection/raw/main/linkedIn-job-card-styler.user.js) |
 | HoverBlurr                 | A script that blur images on the web with customizable blur amount and site whitelist functionality. | [Qomarul Hasan](https://github.com/qomarhsn) | [Download](https://github.com/qomarhsn/Userscript-Collection/raw/main/hoverblurr.user.js) |
-| FB - Clean my feeds        | A script that hide Sponsored and Suggested posts in FB's News Feed, Groups Feed, Watch Videos Feed and Marketplace Feed | [zbluebugz](https://github.com/zbluebugz) | [Download](https://github.com/qomarhsn/Userscript-Collection/raw/main/hoverblurr.user.js) |
+| FB - Clean my feeds        | A script that hide Sponsored and Suggested posts in FB's News Feed, Groups Feed, Watch Videos Feed and Marketplace Feed | [zbluebugz](https://github.com/zbluebugz) | [Download](https://update.greasyfork.org/scripts/431970/FB - Clean my feeds (502).user.js) |
 
 ## Installation
 
