@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         HoverBlurr
 // @namespace    https://github.com/qomarhsn/Userscript-Collection
-// @version      1.0
+// @version      2.0
 // @description  Apply blur effect to images on the web with customizable blur amount and site whitelist functionality.
 // @author       Qomarul Hasan
 // @license      MIT
@@ -127,6 +127,8 @@
     settingsMenu.style.borderRadius = '12px';
     settingsMenu.style.display = 'none';
     settingsMenu.style.width = '280px';
+    settingsMenu.style.height = '400px';  // Set height to 400px
+    settingsMenu.style.overflowY = 'auto'; // Enable scrolling
     settingsMenu.style.zIndex = '10001';
     settingsMenu.style.boxShadow = '0px 6px 10px rgba(0, 0, 0, 0.5)';
     settingsMenu.style.transition = 'transform 0.3s ease-in-out';
@@ -212,7 +214,13 @@
         blurValue = (blurInputSlider.value);  // Directly use the value (1-100)
         blurInputValue.innerText = `Blur: ${blurInputSlider.value}%`;
         GM_setValue('blurValue', blurValue);  // Store blur value
-        applyBlur();  // Apply blur immediately when slider is changed
+
+        // Apply blur if the site is not whitelisted
+        isWhitelisted(function(whitelisted) {
+            if (!whitelisted) {
+                applyBlur();  // Apply blur effect only if site is not whitelisted
+            }
+        });
     });
 
     // Handle whitelist button click
@@ -234,4 +242,25 @@
     icon.addEventListener('click', function() {
         settingsMenu.style.display = settingsMenu.style.display === 'none' ? 'block' : 'none';
     });
+
+    // Keyboard Shortcuts
+    window.addEventListener('keydown', function(e) {
+        if (e.altKey && e.key === 'm') { // Alt + M to toggle the menu
+            settingsMenu.style.display = settingsMenu.style.display === 'none' ? 'block' : 'none';
+        }
+        if (e.altKey && e.key === 'w') { // Alt + W to whitelist/remove current site
+            const hostname = window.location.hostname;
+            if (whitelist.includes(hostname)) {
+                whitelist = whitelist.filter(site => site !== hostname);
+                whitelistButton.innerText = 'Whitelist Site';
+            } else {
+                whitelist.push(hostname);
+                whitelistButton.innerText = 'Remove from Whitelist';
+            }
+            GM_setValue('whitelist', whitelist);
+            updateWhitelistDisplay();
+            updateBlurBasedOnWhitelist();
+        }
+    });
+
 })();
